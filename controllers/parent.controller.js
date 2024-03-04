@@ -38,6 +38,8 @@ const login = (req,res)=>
                 {
                     res.send({status:false,message:"Invalid Password"})
                 }
+                let stringedUser = JSON.stringify(user);
+                localStorage.setItem("ParentInfo", stringedUser)
                 res.send({status:true, message:"valid Password"})
             })
         )

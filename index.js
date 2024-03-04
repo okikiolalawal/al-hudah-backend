@@ -8,8 +8,8 @@ require("dotenv").config()
 const mongoose = require("mongoose");
 let PORT = process.env.PORT
 
-const router = require("./routes/parent.route")
-app.use("/user",router)
+const parentRouter = require("./routes/parent.route")
+app.use("/parent",parentRouter)
 
 app.listen(PORT,()=>{
     console.log("app is running on port"+ PORT)
